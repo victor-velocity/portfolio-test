@@ -1,0 +1,54 @@
+
+/* ABOUT US SECTION  */
+
+.about {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+    padding: 20px 5%;
+    gap: 10%;
+}
+
+.about_me {
+    font-size: 40px;
+}
+
+.me {
+    color: green;
+}
+
+.frontdev {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#about_summary {
+    font-size: 18px;
+    text-align: justify;
+    margin-top: 30px;
+    width: 100%;
+    line-height: 35px;
+}
+
+#btn2 {
+    padding: 12px 28px;
+    font-size: 18px;
+    color: white;
+    background: green;
+    box-shadow: 0px 0px 20px green;
+    color: #1f242d;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 30px;
+}
+
+#btn2:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 25px green;
+}
