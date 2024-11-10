@@ -11,6 +11,26 @@ window.addEventListener('load', () => {
     }, 4000);
 });
 
+const checkbox = document.getElementById('check');
+const body = document.body;
+const cancelIcon = document.getElementById('cancel');
+
+// Disable scroll when menu opens
+checkbox.addEventListener('change', function() {
+    if (checkbox.checked) {
+        body.classList.add('no-scroll');
+    } else {
+        body.classList.remove('no-scroll');
+    }
+});
+
+// Enable scroll when the "X" icon is clicked
+cancelIcon.addEventListener('click', function() {
+    checkbox.checked = false;
+    body.classList.remove('no-scroll');
+});
+
+
 var typed = new Typed('#typed-text', {
     strings: ['a Software Developer', 'a Web Developer', 'theCode', 'a Front-End Developer'],
     typeSpeed: 100,

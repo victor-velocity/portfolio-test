@@ -1,10 +1,14 @@
-* {
+body, * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scrollbar-color: green;
     scroll-behavior: smooth;
 }
+
+.no-scroll {
+    overflow: hidden;
+}
+
 
 @font-face {
     font-family: 'dancing';
@@ -94,13 +98,19 @@
 } */
 
 /* NAV BAR SECTION  */
+#check {
+    display: none !important;
+}
+
+.fa-x {
+    display: none;
+}
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 30px 3%;
-    /* position: sticky; */
     z-index: 100;
     top: 30px;
     left: 0;
@@ -120,7 +130,7 @@ nav ul {
     align-items: center;
 }
 
-nav ul li a::after  {
+nav ul li a::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -132,15 +142,17 @@ nav ul li a::after  {
     transition: transform 0.3s ease;
 }
 
-nav ul li:hover a::after  {
+nav ul li:hover a::after {
     transform: scaleX(1);
 }
 
-nav ul li a:hover, #language:hover {
+nav ul li a:hover,
+#language:hover {
     color: green;
 }
 
-nav ul li a, #language {
+nav ul li a,
+#language {
     color: black;
     text-decoration: none;
     font-family: 'Lato';
@@ -278,7 +290,7 @@ nav ul li:hover {
     align-items: center;
     width: 40px;
     height: 40px;
-    background: transparent; 
+    background: transparent;
     border: 2px solid green;
     border-radius: 50%;
     font-size: 20px;
@@ -320,8 +332,8 @@ nav ul li:hover {
     margin-left: 20px;
 }
 
-.fa-mouse{
-    animation: bounce2 1s ease  infinite normal;
+.fa-mouse {
+    animation: bounce2 1s ease infinite normal;
     transition: .5s ease;
 }
 
@@ -330,7 +342,9 @@ nav ul li:hover {
 }
 
 @keyframes bounce2 {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -360,13 +374,15 @@ nav ul li:hover {
 .slider {
     display: flex;
     gap: 30px;
-    animation: slide 20s linear infinite; /* Slower and continuous animation */
+    animation: slide 20s linear infinite;
+    /* Slower and continuous animation */
 }
 
 @keyframes slide {
     0% {
         transform: translateX(0%);
     }
+
     100% {
         transform: translateX(-100%);
     }
@@ -382,11 +398,11 @@ nav ul li:hover {
     background-color: #f1f1f1;
 }
 
-.head1  {
+.head1 {
     font-size: 18px;
     font-weight: 600;
     margin: 2px 0px;
-    letter-spacing:3px;
+    letter-spacing: 3px;
 }
 
 .head2 {
@@ -447,7 +463,12 @@ nav ul li:hover {
     gap: 40px;
 }
 
-.div1, .div2, .div3, .div4, .div5, .div6 {
+.div1,
+.div2,
+.div3,
+.div4,
+.div5,
+.div6 {
     height: auto;
     border: 2px solid rgba(0, 128, 0, 0.384);
     padding: 10px 25px;
@@ -457,7 +478,12 @@ nav ul li:hover {
     margin: 0px auto;
 }
 
-.div1:hover, .div2:hover, .div3:hover, .div4:hover, .div5:hover, .div6:hover {
+.div1:hover,
+.div2:hover,
+.div3:hover,
+.div4:hover,
+.div5:hover,
+.div6:hover {
     transform: scale(1.01);
     box-shadow: 0px 0px 15px green;
 
@@ -496,7 +522,8 @@ nav ul li:hover {
     border-radius: 15px;
 }
 
-.span2, meter {
+.span2,
+meter {
     width: 90%;
 }
 
@@ -517,7 +544,7 @@ nav ul li:hover {
 
 .quoteimg {
     height: 600px;
-    width:100%;
+    width: 100%;
     position: absolute;
     top: 0;
     border-radius: 10px;
@@ -526,7 +553,7 @@ nav ul li:hover {
     object-fit: cover;
 
 }
-  
+
 .quote div {
     width: 85%;
     z-index: 67;
@@ -534,7 +561,7 @@ nav ul li:hover {
 
 #p5 {
     font-size: 25px;
-    color: rgba(255,255,255,  0.7);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 40px;
     letter-spacing: 2px;
     font-weight: 600;
@@ -543,13 +570,13 @@ nav ul li:hover {
 
 #p6 {
     margin-top: 35px;
-    color: rgba(255, 255, 255,  0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 21px;
 }
 
 #p7 {
     margin-top: 10px;
-    color: rgba(255, 255, 255,  0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 21px;
 }
 
@@ -562,7 +589,7 @@ nav ul li:hover {
 
 .btn4 a {
     text-decoration: none;
-    color: rgba(255, 255, 255,  0.7);
+    color: rgba(255, 255, 255, 0.7);
     transition: 0.5s ease;
 }
 
@@ -672,14 +699,16 @@ footer {
     list-style-type: none;
 }
 
-.links ul li a, .links select {
+.links ul li a,
+.links select {
     color: white;
     text-decoration: none;
     font-size: 18px;
     transition: 0.3s ease;
 }
 
-.links ul li a:hover, .links select:hover {
+.links ul li a:hover,
+.links select:hover {
     color: green;
     transform: translateY(-10px);
 }
@@ -697,12 +726,55 @@ footer {
 }
 
 @media (Max-width: 768px) {
+    .checkbtn {
+        display: block;
+    }
+
     .fa-bars {
         font-size: 20px;
+        cursor: pointer;
+    }
+
+    #cancel {
+        display: block;
+        color: red;
+        font-size: 20px;
+        transition: 0.5s ease;
+        cursor: pointer;
+        margin-left: 80%;
+    }
+
+    #cancel:hover {
+        scale: 1.5;
+        transform: rotate(360deg);
     }
 
     #main-page1 nav ul {
-        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        text-align: center;
+        transition: transform 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 20;
+        padding: 50px 0px;
+    }
+
+    #main-page1 nav ul li a, #main-page1 nav ul select {
+        font-size: 20px;
+    }
+
+    .fa-sun, .fa-moon {
+        font-size: 30px;
+    }
+
+    /* When checked, slide in from the top-right */
+    #check:checked ~ ul {
+        transform: translateX(-100%);
     }
 
     .name {
@@ -714,7 +786,7 @@ footer {
         padding: 0px;
         justify-content: center;
         align-items: center;
-        margin: 80px 3%  80px;
+        margin: 80px 3% 80px;
     }
 
     .image {
@@ -757,7 +829,8 @@ footer {
         text-align: center;
     }
 
-    #p6, #p7 {
+    #p6,
+    #p7 {
         font-size: 18px;
         text-align: center;
     }
@@ -786,7 +859,12 @@ footer {
         justify-content: center;
     }
 
-    .div1, .div2, .div3, .div4, .div5, .div6 {
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div6 {
         margin: 0px auto;
     }
 
@@ -799,7 +877,8 @@ footer {
         padding: 0px 8px;
     }
 
-    .port6,.port7 {
+    .port6,
+    .port7 {
         font-size: 15px;
     }
 
@@ -866,7 +945,8 @@ footer {
     font-family: 'dancing';
 }
 
-.address, .mail {
+.address,
+.mail {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -874,7 +954,8 @@ footer {
     font-size: 18px;
 }
 
-.fa-location-dot, .fa-envelope {
+.fa-location-dot,
+.fa-envelope {
     color: green;
 }
 
@@ -888,9 +969,12 @@ footer {
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-7px);
     }
@@ -970,7 +1054,8 @@ footer {
     background-color: rgb(1, 107, 1);
 }
 
-.github, .linkedin {
+.github,
+.linkedin {
     font-size: 50px;
     margin: 10px 0px;
 }
@@ -1035,7 +1120,7 @@ input {
     margin: 6px auto;
     border: none;
     outline: none;
-    color:black;
+    color: black;
     background-color: rgba(105, 109, 118, 0.636);
 }
 
