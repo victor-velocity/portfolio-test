@@ -1,52 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About</title>
-        <link rel="stylesheet" href="/assets/css/style.css" />
-    </head>
-    <body>
-        <main>
-            <section class="main-page1">
-                <nav>
-                    <div class="name">
-                        <span class="name1">Victor</span>
-                        <span class="name2">Asama</span>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" id="theme" href="assets/css/dark.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="assets/css/mediaquery.css" />
+</head>
+
+<body>
+    <header id="main-page1">
+        <nav>
+            <div class="name">
+                <span class="name1">Victor</span>
+                <span class="name2">Asama</span>
+            </div>
+            <!-- Checkbox for toggling menu -->
+            <input type="checkbox" id="check" />
+
+            <!-- Menu icon -->
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <i class="fa-solid fa-x" id="cancel"></i>
+                <li>
+                    <a href="index.html" class="custom-underline" id="home">Home</a>
+                </li>
+                <li><a href="#" id="about">About</a></li>
+                <li><a href="portfolio.html" id="portfolio">Portfolio</a></li>
+                <li><a href="contact.html" id="contact">Contact</a></li>
+                <li>
+                    <select name="language" id="language" class="lang1" onchange="changeLanguage()">
+                        <option value="eng" class="opt">English</option>
+                        <option value="french" class="opt">French</option>
+                        <option value="spanish" class="opt">Spanish</option>
+                    </select>
+                </li>
+                <i class="fa-solid fa-moon" id="toggle" onclick="switchMode()"></i>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="about">
+                <div class="img2"></div>
+                <div class="about-content">
+                    <h2 class="about_me">About <span class="me">Me</span></h2>
+                    <p class="frontdev">Software Developer</p>
+                    <p id="about_summary" onclick="prevContent()">
+                        I’m Victor Asama, a passionate web / software developer dedicated
+                        to creating engaging and visually appealing web experiences.
+                        Specializing in HTML, CSS, and JavaScript, I enjoy translating
+                        design concepts into functional and user-friendly interfaces.
+                    </p>
+                    <button class="btn2" id="btn2" onclick="aboutContent()">
+                        Read More
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="view-project">
+                <div class="project-content">
+                    <p id="p17">A Developer's Journey</p>
+                    <p id="p8">Innovation in Every Line</p>
+                    <p id="p9">
+                        Discover the projects that have defined my career, each a
+                        testament to my commitment to excellence
+                    </p>
+                    <div class="show">
+                        <div class="show2">
+                            <div><i class="fa-solid fa-door-open icon2"></i></div>
+                            <p>
+                                Developed a scalable login and sign-up page for a high-traffic
+                                platform, handling thousands of daily users while ensuring a
+                                seamless and secure user experience.
+                            </p>
+                        </div>
+                        <div class="show2">
+                            <div><i class="fa-brands fa-webflow icon2"></i></div>
+                            <p>
+                                Designed a dynamic, one-page website for a dance contest with
+                                smooth navigation and an intuitive sign-up flow.
+                            </p>
+                        </div>
                     </div>
-                    <ul>
-                        <li><a href="index.html" class="custom-underline"
-                                id="home">Home</a></li>
-                        <li><a href="#" target="_self"
-                                id="about">About</a></li>
-                        <li><a href="" id="service">Services</a></li>
-                        <li><a href id="portfolio">Portfolio</a></li>
-                        <li><a href="contact.html" id="contact">Contact</a></li>
-                        <!-- <li>
-                            <select name="language" id="language"
-                                onchange="changeLanguage()">
-                                <option value="eng" class="opt">English</option>
-                                <option value="french"
-                                    class="opt">French</option>
-                                <option value="spanish"
-                                    class="opt">Spanish</option>
-                            </select>
-                        </li> -->
-                    </ul>
-                </nav>
-                <div class="about">
-                    <div class="image"></div>
-                    <div class="about-content">
-                        <h2 class="about_me">About <span class="me">Me</span></h2>
-                        <p class="frontdev">Front End Developer</p>
-                        <p id="about_summary" onclick="prevContent()">
-                            I’m Victor Asama, a passionate web developer dedicated to creating engaging and visually appealing web experiences. Specializing in HTML, CSS, and JavaScript, I enjoy translating design concepts into functional and user-friendly interfaces.
-                        </p>
-                        <button class="btn2" id="btn2" onclick="aboutContent()">Read More</button>
+                    <button class="btn5">
+                        See My Projects <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <img src="assets/images/bg4.jpg" class="bg4" alt="" />
+            </div>
+        </section>
+        <section class="getintouch">
+            <div>
+                <div>
+                    <p id="p10">Get in Touch</p>
+                    <p id="p11">We are eager to collaborate and bring your ideas to life</p>
+                </div>
+                <div>
+                    <div id="checks">
+                        <span><i class="fa-solid fa-check"></i></span>
+                        <p class="p12">Custom software solutions tailored to your needs</p>
+                    </div>
+                    <div id="checks">
+                        <span><i class="fa-solid fa-check"></i></span>
+                        <p class="p12">Expert guidance from industry professionals</p>
+                    </div>
+                    <div class="callButtons">
+                        <button>
+                            <span><i class="fa-solid fa-envelope envelope2"></i> Contact Us</span>
+                        </button>
+                        <button>
+                            <span><i class="fa-solid fa-phone"></i>Schedule a call</span>
+                        </button>
                     </div>
                 </div>
-            </section>
-        </main>
-        <script src="/assets/js/main.js"></script>
-    </body>
+            </div>
+            <img src="assets/images/bg2.jpg" alt="contact-img" class="call" />
+        </section>
+    </main>
+    <footer>
+        <div class="links">
+            <ul>
+                <li><a href="index.html" class="custom-underline" id="home">Home</a></li>
+                <li><a href="#" id="about">About</a></li>
+
+                <li><a href="portfolio.html" id="portfolio">Portfolio</a></li>
+                <li><a href="contact.html" id="contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="brand">
+            <div>
+                <p class="copy">&copy theCode 2023, Showcasing Innovation and Expertise</p>
+            </div>
+            <div class="brands">
+                <a href=""><i class="fa-brands fa-instagram "></i></a></i>
+                <a href=""><i class="fa-brands fa-x "></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100016614308613" target="_blank"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/asama-victor" target="_blank"><i
+                        class="fa-brands fa-linkedin "></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/about.js"></script>
+</body>
+
 </html>

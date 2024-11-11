@@ -8,29 +8,40 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" id="theme" href="assets/css/dark.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/css/mediaquery.css">
 </head>
 
 <body>
-    <nav>
-        <div class="name">
-            <span class="name1">Victor</span>
-            <span class="name2">Asama</span>
-        </div>
-        <ul>
-            <li><a href="index.html" class="custom-underline" id="home">Home</a></li>
-            <li><a href="about.html" target="_self" id="about">About</a></li>
-            <li><a href="" id="portfolio">Portfolio</a></li>
-            <li><a href="contact.html" id="contact">Contact</a></li>
-            <li>
-                <select name="language" id="language" onchange="changeLanguage()">
-                    <option value="eng" class="opt">English</option>
-                    <option value="french" class="opt">French</option>
-                    <option value="spanish" class="opt">Spanish</option>
-                </select>
-            </li>
-            <i class="fa-solid fa-sun" id="toggle" onclick="switchMode()"></i>
-        </ul>
-    </nav>
+    <div id="main-page1">
+        <nav>
+            <div class="name">
+                <span class="name1">Victor</span>
+                <span class="name2">Asama</span>
+            </div>
+            <!-- Checkbox for toggling menu -->
+            <input type="checkbox" id="check">
+
+            <!-- Menu icon -->
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <i class="fa-solid fa-x" id="cancel"></i>
+                <li><a href="index.html" class="custom-underline" id="home">Home</a></li>
+                <li><a href="about.html" target="_self" id="about">About</a></li>
+                <li><a href="portfolio.html" id="portfolio">Portfolio</a></li>
+                <li><a href="#" id="contact">Contact</a></li>
+                <li>
+                    <select name="language" id="language" class="lang1" onchange="changeLanguage()">
+                        <option value="eng" class="opt">English</option>
+                        <option value="french" class="opt">French</option>
+                        <option value="spanish" class="opt">Spanish</option>
+                    </select>
+                </li>
+                <i class="fa-solid fa-moon" id="toggle" onclick="switchMode()"></i>
+            </ul>
+        </nav>
+    </div>
     <main>
         <div class="grid2">
             <section class="info">
@@ -79,7 +90,7 @@
                     <div>
                         <span><i class="fa-brands fa-github github"></i></span>
                         <p class="b-name">GitHub</p>
-                        <p class="b-content">Explore our code repositories and contribute to open-source projects.</p>
+                        <p class="b-content">Connect with our professionals and explore career opportunities.</p>
                     </div>
                 </a>
                 <a href="">
@@ -109,19 +120,11 @@
     <footer>
         <div class="links">
             <ul>
-                <li><a href="#" class="custom-underline" id="home">Home</a></li>
-                <li><a href="about.html" target="_self" id="about">About</a></li>
+                <li><a href="index.html" class="custom-underline" id="home">Home</a></li>
+                <li><a href="about.html" id="about">About</a></li>
 
-                <li><a href="" id="portfolio">Portfolio</a></li>
-                <li><a href="contact.html" id="contact">Contact</a></li>
-                <li>
-                    <select name="language" id="language" onchange="changeLanguage()">
-                        <option value="eng" class="opt">English</option>
-                        <option value="french" class="opt">French</option>
-                        <option value="spanish" class="opt">Spanish</option>
-                    </select>
-
-                </li>
+                <li><a href="portfolio.html" id="portfolio">Portfolio</a></li>
+                <li><a href="#" id="contact">Contact</a></li>
             </ul>
         </div>
         <div class="brand">
